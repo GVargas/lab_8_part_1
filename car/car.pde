@@ -3,6 +3,8 @@ void setup() {
 }
 
 int x = 200;
+int car_2_x = 100;
+int velocity = 3;
 
 void draw() {
   noStroke();
@@ -10,6 +12,10 @@ void draw() {
   background(180, 200, 240);
 
   // draw the ground
+  fill(100, 170, 120);
+  rect(0, 310, width, height - 310);
+  
+ 
   fill(100, 170, 120);
   rect(0, 310, width, height - 310);
   
@@ -29,4 +35,24 @@ void draw() {
   ellipse(x + 20, 320, 20, 20);
   ellipse(x + 60, 320, 20, 20);
 
-}
+  
+  // draw a blue car
+  fill(150, 150, 150);
+  ellipse(car_2_x + 30, 320, 90, 20);
+
+  fill(0,0,100);
+  rect(car_2_x, 300, 80, 20);
+  rect(car_2_x + 10, 285, 60, 15);
+  
+  fill(150, 170, 200);
+  rect(car_2_x + 47, 287, 20, 10);
+  rect(car_2_x + 25, 287, 20, 10);
+  
+  fill(0, 0, 0);
+  ellipse(car_2_x + 20, 320, 20, 20);
+  ellipse(car_2_x + 60, 320, 20, 20);
+
+ x = x + velocity;
+ car_2_x = car_2_x + velocity;
+
+} car
